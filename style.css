@@ -38,7 +38,7 @@ main{
 }
 .slider .image{
     height: 100%;
-    width: 60rem;
+    width: 30rem;
     box-shadow: 1px 1px 3px rgba(0, 0, 7, 0.5);
     z-index: 9;
 }
@@ -68,7 +68,7 @@ main{
 }
 .name{
     background-color: white;
-    width: 20rem;
+    width: 25rem;
     margin-top: 15rem;
     font-size: 1rem;
     font-weight: 700;
@@ -79,15 +79,17 @@ main{
 }
 .nav{
     display: flex;
-    height: 2.5rem;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
     width: 6rem;
     z-index: 12;
     cursor: pointer;
     background-color:white;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
     box-shadow: 1px 1px 4px rgba(0, 0, 7, 0.5);
     position: absolute;
     transform: translate(35rem, 24rem);
@@ -256,7 +258,7 @@ main{
         height: 60px;
     }
 }
-@media (max-width:3414px){
+@media (max-width:414px){
     main{
         width: 100%;
         height: 100vh;
