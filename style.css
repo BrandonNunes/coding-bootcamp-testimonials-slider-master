@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap'); 
+   
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+}
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    width: 60rem;
+    height: 25rem;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+.container .slider{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    clip-path: circle(0% at 0 50%);
+}
+.container .slider.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 1.5s;
+}
+.slider .image{
+    height: 100%;
+    width: 60rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 7, 0.5);
+    z-index: 9;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+}
+.content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    font-size: 1.4rem;
+    position: relative;
+
+    background-color:transparent;
+}
+.description{
+    width: 35rem;
+    font-weight: 400;
+    color: hsl(240, 38%, 20%);
+    padding: .6rem;
+    position: absolute;
+    z-index: 10;
+    background-color: transparent;
+}
+.name{
+    background-color: white;
+    width: 20rem;
+    margin-top: 15rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.name .profession{
+    color: hsl(240, 18%, 77%);
+    margin-left: .3rem;
+}
+.nav{
+    display: flex;
+    height: 2.5rem;
+    width: 6rem;
+    z-index: 12;
+    cursor: pointer;
+    background-color:white;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 1px 1px 4px rgba(0, 0, 7, 0.5);
+    position: absolute;
+    transform: translate(35rem, 24rem);
+}
+.nav .prev, .next{
+    width: 3rem;
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.nav .prev{
+    border-radius: 50%;
+}
+.nav .next{
+    border-radius: 50%;
+}
+
+#bg,#curve,#quotes{
+    position: absolute;
+}
+#bg{
+    right: 7.5rem;
+    height: 30.6rem;
+    width: 40rem;
+    bottom: 3.1rem;
+}
+#curve{
+    left: 0;
+    bottom: 0;
+}
+#quotes{
+    left: 18rem;
+    top: 8.7rem;
+}
+
+@media (max-width:375px){
+    main{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+       
+        display: flex;
+        justify-content: center;
+        background-color: transparent;
+        width: 60rem;
+        height: 25rem;
+        border-radius: 5px;
+        position: relative;
+        z-index: 1;
+    }
+    .container .slider{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        clip-path: circle(0% at 0 50%);
+    }
+    .container .slider.active{
+        clip-path: circle(150% at 0 50%);
+        transition: 1.5s;
+    }
+    .slider .image{
+        height: 20rem;
+        width: 15rem;
+        margin-top: -9rem;
+        box-shadow: 1px 1px 3px rgba(0, 0, 7, 0.5);
+        z-index: 9;
+        order: 1;
+      
+    }
+    .image img{
+        width: 100%;
+        height: 100%;
+    }
+    .content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: center;
+        font-size: 1.1rem;
+        position: relative;
+        order: 2;
+        background-color:transparent;
+    }
+    .description{
+        width: 100%;
+        top: 6rem;
+        font-weight: 400;
+        text-align: center;
+        color: hsl(240, 38%, 20%);
+        padding: .6rem;
+        position: absolute;
+        z-index: 10;
+        background-color: transparent;
+    }
+    .name{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        height: 3rem;
+        width: 100%;
+        margin-top: 15rem;
+        font-size: 1rem;
+        font-weight: 700;
+        align-items: center;
+        transform: translateY(3rem);
+    }
+    .name .profession{
+        color: hsl(240, 18%, 77%);
+        margin: 0;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        height: 3.5rem;
+        width: 7rem;
+        z-index: 12;
+        cursor: pointer;
+        background-color:white;
+        border-top-left-radius: 1.5rem;
+        border-bottom-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+        box-shadow: 1px 1px 4px rgba(0, 0, 7, 0.5);
+        transform: translateY(5.2rem);
+    }
+    .nav .prev, .next{
+        width: 3rem;
+        border:none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .nav .prev{
+        border-radius: 50%;
+    }
+    .nav .next{
+        border-radius: 50%;
+    }
+    
+    #bg,#curve,#quotes{
+        position: absolute;
+      
+    }
+    #bg{
+        width: 20rem;
+        height: 20rem;
+        top: 1.9rem;
+        left: 1.1rem;
+    }
+    #curve{
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    #quotes{
+        top: 24rem;
+        left: 40%;
+        height: 60px;
+    }
+}
+@media (max-width:3414px){
+    main{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+       
+        display: flex;
+        justify-content: center;
+        background-color: transparent;
+        width: 60rem;
+        height: 25rem;
+        border-radius: 5px;
+        position: relative;
+        z-index: 1;
+    }
+    .container .slider{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        clip-path: circle(0% at 0 50%);
+    }
+    .container .slider.active{
+        clip-path: circle(150% at 0 50%);
+        transition: 1.5s;
+    }
+    .slider .image{
+        height: 20rem;
+        width: 18rem;
+        margin-top: -2rem;
+        box-shadow: 1px 1px 3px rgba(0, 0, 7, 0.5);
+        z-index: 9;
+        order: 1;
+      
+    }
+    .image img{
+        width: 100%;
+        height: 100%;
+    }
+    .content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: center;
+        font-size: 1.2rem;
+        position: relative;
+        order: 2;
+        background-color:transparent;
+    }
+    .description{
+        width: 100%;
+        top: 6rem;
+        font-weight: 400;
+        text-align: center;
+        color: hsl(240, 38%, 20%);
+        padding: .6rem;
+        position: absolute;
+        z-index: 10;
+        background-color: transparent;
+    }
+    .name{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        height: 3rem;
+        width: 100%;
+        margin-top: 15rem;
+        font-size: 1rem;
+        font-weight: 700;
+        align-items: center;
+        background-color: transparent;
+        transform: translateY(3rem);
+    }
+    .name .profession{
+        color: hsl(240, 18%, 77%);
+        margin: 0;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        height: 3.5rem;
+        width: 7rem;
+        z-index: 12;
+        cursor: pointer;
+        background-color:white;
+        border-top-left-radius: 1.5rem;
+        border-bottom-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+        box-shadow: 1px 1px 4px rgba(0, 0, 7, 0.5);
+        transform: translateY(10.2rem);
+    }
+    .nav .prev, .next{
+        width: 3rem;
+        border:none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .nav .prev{
+        border-radius: 50%;
+    }
+    .nav .next{
+        border-radius: 50%;
+    }
+    
+    #bg,#curve,#quotes{
+        position: absolute;
+      
+    }
+    #bg{
+        width: 23rem;
+        height: 22rem;
+        top: 1.9rem;
+        left: 1.1rem;
+    }
+    #curve{
+        left: 0;
+        bottom: 0;
+        width: 70%;
+        height: 3rem;
+    }
+    #quotes{
+        top: 26.3rem;
+        left: 40%;
+        height: 60px;
+    }
+}
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+ 
