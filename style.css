@@ -392,6 +392,143 @@ main{
         left: 40%;
         height: 60px;
     }
+
+}
+@media (max-width:768px){
+    main{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+       
+        display: flex;
+        justify-content: center;
+        background-color: transparent;
+        width: 60rem;
+        height: 25rem;
+        border-radius: 5px;
+        position: relative;
+        z-index: 1;
+    }
+    .container .slider{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        clip-path: circle(0% at 0 50%);
+    }
+    .container .slider.active{
+        clip-path: circle(150% at 0 50%);
+        transition: 1.5s;
+    }
+    .slider .image{
+        height: 35rem;
+        width: 28rem;
+        margin-top: -2rem;
+        box-shadow: 1px 1px 3px rgba(0, 0, 7, 0.5);
+        z-index: 9;
+        order: 1;
+      
+    }
+    .image img{
+        width: 100%;
+        height: 100%;
+    }
+    .content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        font-size: 1.7rem;
+        position: relative;
+        order: 2;
+        background-color:transparent;
+    }
+    .description{
+        width: 45rem;
+        top: 6rem;
+        font-weight: 400;
+        text-align: center;
+        color: hsl(240, 38%, 20%);
+        padding: .6rem;
+        position: absolute;
+        z-index: 10;
+        background-color: transparent;
+    }
+    .name{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        height: 3rem;
+        width: 100%;
+        margin-top: 16rem;
+        font-size: 1rem;
+        font-weight: 700;
+        align-items: center;
+        background-color: transparent;
+        transform: translateY(3rem);
+    }
+    .name .profession{
+        color: hsl(240, 18%, 77%);
+        margin: 0;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        height: 3.5rem;
+        width: 7rem;
+        z-index: 12;
+        cursor: pointer;
+        background-color:white;
+        border-top-left-radius: 1.5rem;
+        border-bottom-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+        box-shadow: 1px 1px 4px rgba(0, 0, 7, 0.5);
+        transform: translateY(14.5rem);
+    }
+    .nav .prev, .next{
+        width: 3rem;
+        border:none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .nav .prev{
+        border-radius: 50%;
+    }
+    .nav .next{
+        border-radius: 50%;
+    }
+    
+    #bg,#curve,#quotes{
+        position: absolute;
+      
+    }
+    #bg{
+        width: 39.5rem;
+        height: 34rem;
+        top: 4rem;
+        left: 1.1rem;
+    }
+    #curve{
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 6rem;
+    }
+    #quotes{
+        top: 40rem;
+        left: 40%;
+        height: 80px;
+    }
+
 }
    
    
