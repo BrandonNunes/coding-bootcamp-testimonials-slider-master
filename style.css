@@ -124,25 +124,24 @@ main{
     left: 18rem;
     top: 8.7rem;
 }
-
-@media (max-width:375px){
+@media (max-width:768px) {
     main{
         width: 100%;
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
     }
     .container{
-       
         display: flex;
         justify-content: center;
         background-color: transparent;
-        width: 60rem;
+        width: 100vw;
         height: 25rem;
         border-radius: 5px;
         position: relative;
-        z-index: 1;
+        z-index: 1;   
     }
     .container .slider{
         width: 100%;
@@ -154,14 +153,11 @@ main{
         position: absolute;
         clip-path: circle(0% at 0 50%);
     }
-    .container .slider.active{
-        clip-path: circle(150% at 0 50%);
-        transition: 1.5s;
-    }
     .slider .image{
-        height: 20rem;
-        width: 15rem;
-        margin-top: -9rem;
+        height: 28rem;
+        width: 30rem;
+        top: 3rem;
+        margin-top: -1rem;
         box-shadow: 1px 1px 3px rgba(0, 0, 7, 0.5);
         z-index: 9;
         order: 1;
@@ -177,33 +173,26 @@ main{
         flex-direction: column;
         text-align: left;
         justify-content: center;
-        font-size: 1.1rem;
-        position: relative;
+        font-size: 1.2rem;
         order: 2;
-        background-color:transparent;
+
     }
     .description{
-        width: 100%;
-        top: 6rem;
+        width: 100vw;
         font-weight: 400;
         text-align: center;
-        color: hsl(240, 38%, 20%);
-        padding: .6rem;
-        position: absolute;
-        z-index: 10;
-        background-color: transparent;
+
+        font-size: 1.7rem;
     }
     .name{
         display: flex;
         flex-direction: column;
+        align-self: center;
         background-color: white;
         height: 3rem;
         width: 100%;
         margin-top: 15rem;
-        font-size: 1rem;
-        font-weight: 700;
         align-items: center;
-        transform: translateY(3rem);
     }
     .name .profession{
         color: hsl(240, 18%, 77%);
@@ -215,14 +204,10 @@ main{
         height: 3.5rem;
         width: 7rem;
         z-index: 12;
-        cursor: pointer;
-        background-color:white;
-        border-top-left-radius: 1.5rem;
-        border-bottom-left-radius: 1.5rem;
-        border-top-right-radius: 1.5rem;
-        border-bottom-right-radius: 1.5rem;
-        box-shadow: 1px 1px 4px rgba(0, 0, 7, 0.5);
-        transform: translateY(5.2rem);
+        align-self: center;
+       left: -14rem;
+       top: -9rem;
+       
     }
     .nav .prev, .next{
         width: 3rem;
@@ -242,21 +227,22 @@ main{
       
     }
     #bg{
-        width: 20rem;
-        height: 20rem;
-        top: 1.9rem;
-        left: 1.1rem;
+        width: 37rem;
+        height: auto;
+        top: 4.9rem;
+        left: 4.8rem;
     }
     #curve{
         left: 0;
         bottom: 0;
-        width: 100%;
+        width: 80%;
+        height: 9rem;
     }
     #quotes{
-        top: 24rem;
+        top: 26.3rem;
         left: 40%;
         height: 60px;
-    }
+    }  
 }
 @media (max-width:414px){
     main{
@@ -265,17 +251,17 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
     }
     .container{
-       
         display: flex;
         justify-content: center;
         background-color: transparent;
-        width: 60rem;
+        width: 100vw;
         height: 25rem;
         border-radius: 5px;
         position: relative;
-        z-index: 1;
+        z-index: 1;   
     }
     .container .slider{
         width: 100%;
@@ -287,14 +273,11 @@ main{
         position: absolute;
         clip-path: circle(0% at 0 50%);
     }
-    .container .slider.active{
-        clip-path: circle(150% at 0 50%);
-        transition: 1.5s;
-    }
     .slider .image{
-        height: 20rem;
-        width: 18rem;
-        margin-top: -2rem;
+        height: 28rem;
+        width: 20rem;
+        top: 3rem;
+        margin-top: -1rem;
         box-shadow: 1px 1px 3px rgba(0, 0, 7, 0.5);
         z-index: 9;
         order: 1;
@@ -311,33 +294,25 @@ main{
         text-align: left;
         justify-content: center;
         font-size: 1.2rem;
-        position: relative;
         order: 2;
-        background-color:transparent;
+
     }
     .description{
-        width: 100%;
-        top: 6rem;
+        width: 100vw;
         font-weight: 400;
         text-align: center;
-        color: hsl(240, 38%, 20%);
-        padding: .6rem;
-        position: absolute;
-        z-index: 10;
-        background-color: transparent;
+
+        font-size: 1.3rem;
     }
     .name{
         display: flex;
         flex-direction: column;
+        align-self: center;
         background-color: white;
         height: 3rem;
         width: 100%;
         margin-top: 15rem;
-        font-size: 1rem;
-        font-weight: 700;
         align-items: center;
-        background-color: transparent;
-        transform: translateY(3rem);
     }
     .name .profession{
         color: hsl(240, 18%, 77%);
@@ -349,14 +324,9 @@ main{
         height: 3.5rem;
         width: 7rem;
         z-index: 12;
-        cursor: pointer;
-        background-color:white;
-        border-top-left-radius: 1.5rem;
-        border-bottom-left-radius: 1.5rem;
-        border-top-right-radius: 1.5rem;
-        border-bottom-right-radius: 1.5rem;
-        box-shadow: 1px 1px 4px rgba(0, 0, 7, 0.5);
-        transform: translateY(10.2rem);
+        align-self: center;
+       left: -25rem;
+       top: -13rem;
     }
     .nav .prev, .next{
         width: 3rem;
@@ -394,24 +364,100 @@ main{
     }
 
 }
-@media (max-width:768px){
-    main{
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+@media screen and (max-width:375px) {
+
+        .container{
+            display: flex;
+            justify-content: center;
+            background-color: transparent;
+            width: 100vw;
+            height: 25rem;
+            border-radius: 5px;
+            position: relative;
+            z-index: 1;   
+        }
+        .container .slider{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            clip-path: circle(0% at 0 50%);
+        }
+        .slider .image{
+            height: 28rem;
+            width: 20rem;
+            top: 3rem;
+            margin-top: -1rem;
+            box-shadow: 1px 1px 3px rgba(0, 0, 7, 0.5);
+            z-index: 9;
+            order: 1;
+          
+        }
+        .content{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            justify-content: center;
+            font-size: 1.2rem;
+            order: 2;
+    
+        }
+        .description{
+            width: 100vw;
+            font-weight: 400;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+     
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            height: 3.5rem;
+            width: 7rem;
+            z-index: 12;
+            align-self: center;
+           left: -26rem;
+           top: -13rem;
+        }
+      
+        
+        #bg,#curve,#quotes{
+            position: absolute;
+          
+        }
+        #bg{
+            width: 23rem;
+            height: 24rem;
+            top: 3.9rem;
+            left: .1rem;
+        }
+        #curve{
+            left: 0;
+            bottom: 0;
+            width: 70%;
+            height: 3rem;
+        }
+        #quotes{
+            top: 29.3rem;
+            left: 40%;
+            height: 60px;
+        }
+    
     }
+@media screen and (max-width:360px) {
     .container{
-       
         display: flex;
         justify-content: center;
         background-color: transparent;
-        width: 60rem;
+        width: 100vw;
         height: 25rem;
         border-radius: 5px;
         position: relative;
-        z-index: 1;
+        z-index: 1;   
     }
     .container .slider{
         width: 100%;
@@ -423,115 +469,125 @@ main{
         position: absolute;
         clip-path: circle(0% at 0 50%);
     }
-    .container .slider.active{
-        clip-path: circle(150% at 0 50%);
-        transition: 1.5s;
-    }
     .slider .image{
-        height: 35rem;
-        width: 28rem;
-        margin-top: -2rem;
+        height: 28rem;
+        width: 20rem;
+        top: 5rem;
+        margin-top: -1rem;
         box-shadow: 1px 1px 3px rgba(0, 0, 7, 0.5);
         z-index: 9;
         order: 1;
-      
+      transform: translateY(3rem);
     }
-    .image img{
-        width: 100%;
-        height: 100%;
-    }
-    .content{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        font-size: 1.7rem;
-        position: relative;
-        order: 2;
-        background-color:transparent;
-    }
+   
     .description{
-        width: 45rem;
-        top: 6rem;
+        width: 100vw;
         font-weight: 400;
         text-align: center;
-        color: hsl(240, 38%, 20%);
-        padding: .6rem;
-        position: absolute;
-        z-index: 10;
-        background-color: transparent;
+        font-size: 1.1rem;
     }
-    .name{
-        display: flex;
-        flex-direction: column;
-        background-color: white;
-        height: 3rem;
-        width: 100%;
-        margin-top: 16rem;
-        font-size: 1rem;
-        font-weight: 700;
-        align-items: center;
-        background-color: transparent;
-        transform: translateY(3rem);
-    }
-    .name .profession{
-        color: hsl(240, 18%, 77%);
-        margin: 0;
-    }
+ 
     .nav{
         display: flex;
         justify-content: space-between;
         height: 3.5rem;
         width: 7rem;
         z-index: 12;
-        cursor: pointer;
-        background-color:white;
-        border-top-left-radius: 1.5rem;
-        border-bottom-left-radius: 1.5rem;
-        border-top-right-radius: 1.5rem;
-        border-bottom-right-radius: 1.5rem;
-        box-shadow: 1px 1px 4px rgba(0, 0, 7, 0.5);
-        transform: translateY(14.5rem);
-    }
-    .nav .prev, .next{
-        width: 3rem;
-        border:none;
-        background-color: transparent;
-        cursor: pointer;
-    }
-    .nav .prev{
-        border-radius: 50%;
-    }
-    .nav .next{
-        border-radius: 50%;
-    }
-    
-    #bg,#curve,#quotes{
-        position: absolute;
-      
+        align-self: center;
+       left: -27rem;
+       top: -10rem;
     }
     #bg{
-        width: 39.5rem;
-        height: 34rem;
-        top: 4rem;
-        left: 1.1rem;
+        width: 23rem;
+        height: 24rem;
+        top: 1.9rem;
+        left: .1rem;
     }
     #curve{
         left: 0;
         bottom: 0;
-        width: 100%;
-        height: 6rem;
+        width: 70%;
+        height: 3rem;
     }
     #quotes{
-        top: 40rem;
+        top: 25.3rem;
         left: 40%;
-        height: 80px;
+        height: 60px;
     }
-
 }
+@media screen and (max-width:320px) {
+    
+
+  .container{
+        display: flex;
+        justify-content: center;
+        background-color: transparent;
+        width: 100vw;
+        height: 25rem;
+        border-radius: 5px;
+        position: relative;
+        z-index: 1;   
+    }
+    .container .slider{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        clip-path: circle(0% at 0 50%);
+    }
+    .slider .image{
+        height: 18rem;
+        width: 18rem;
+        top: 5rem;
+        margin-top: -1rem;
+        box-shadow: 1px 1px 3px rgba(0, 0, 7, 0.5);
+        z-index: 9;
+        order: 1;
+        transform: translate(3rem, 3rem);
+    }
    
-   
+    .description{
+        width: 100%;
+        font-weight: 400;
+        text-align: center;
+        left: 1rem;
+        font-size: .9rem;
+        overflow: visible;
+    }
+ 
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        height: 2.5rem;
+        width: 6rem;
+        z-index: 12;
+        align-self: center;
+       left: -26rem;
+       top: -10rem;
+    }
+    #bg{
+        width: 23rem;
+        height: 22rem;
+        top: -.1rem;
+        left: .1rem;
+    }
+    #curve{
+        left: 0;
+        bottom: 0;
+        width: 70%;
+        height: 3rem;
+    }
+    #quotes{
+        top: 25.3rem;
+        left: 40%;
+        height: 60px;
+    }
+    
+}
+
    
    
    
